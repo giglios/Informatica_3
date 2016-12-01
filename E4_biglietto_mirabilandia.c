@@ -18,7 +18,7 @@ main()
            }else{
                 printf("quanti anni ha il cliente? \n");
                 scanf("%f",& anni);
-                if(anni>=60){/*se il cliente ha più 60 anni allora il prezzo è di 25 euro*/
+                if(anni>60){/*se il cliente ha più 60 anni allora il prezzo è di 25 euro*/
                      pr=25;
                 }else{
                      printf("quanto è alto il cliente? \n");
@@ -38,10 +38,9 @@ main()
                                    if(dis==1){/*se il cliente vuole il supplemento per mirabeach allora il prezzo aumenterà di 9,50 euro*/
                                         pr=44,40;
                                    }
-                             }else{
-                                   if(h<100){/*se il cliente è alto meno di 100 centimetri allora il costo del biglietto sarà gratis*/
-                                             pr=gratis;
-                                   } 
+                             }else{    /*se il cliente è alto meno di 100 centimetri allora il costo del biglietto sarà gratis*/
+                                   pr=gratis;
+                                    
                              }
                      }
                 }
