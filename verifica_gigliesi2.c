@@ -7,20 +7,19 @@
 #include<math.h>
 
 main(){
-	int vettore[100];
-	int x;
-	int K;
-	int trovato;
-	int pos;
-	int NUM;
-	
+	int vettore[100];// array	
+        int x;// variabile per l'array
+        int K;// vettore per l'array
+        int trovato;// variabile che mi dice quando ho trovato il numero	
+        int pos;// variabile che mi indica la posizione	
+        int NUM;// numero da trovare nell'array		
 	do{
 		printf("\n inserire il numero di elementi del vettore  ");
 		scanf("%d",& K);
-	}while(K>100);
-	x=0;
-	while(x<K){
-		printf("\n inserire un numero  ");
+	}while(K>100);// se k è minore di 100 all'ora			
+            x=0;
+	while(x<K){// finché x è minore di k fai il ciclo		
+                printf("\n inserire un numero  ");
 		scanf("%d",& vettore[x]);
 		x++;
 	}
@@ -29,14 +28,14 @@ main(){
 	trovato=0;
 	pos=0;
 	x=0;
-	while((pos<K)&&(trovato==1)){
-		if(vettore[x]==NUM){
-			trovato=1;
+	while((pos<K)&&(trovato==1)){// finché posso è minore di k è trovato è uguale a 1		
+                        if(vettore[x]==NUM){//se il numero dell'array è uguale al numero da cercare allora imposta trovato uguale a 1			
+                            trovato=1;
 		}
 		pos++;
 		x++;
 	}
-	if(trovato==0){
-		printf(NUM,"\n %d non � presente nella lista");
+	if(trovato==0){// se trovato è uguale a 0 allora il numero nn si trova nella lista	
+                printf(NUM,"\n %d non è presente nella lista");
 	}
 }
